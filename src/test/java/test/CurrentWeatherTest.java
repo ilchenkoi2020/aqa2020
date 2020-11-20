@@ -33,4 +33,11 @@ public class CurrentWeatherTest extends BaseTest {
         Assert.assertEquals(currentWeatherAvailable.getLocation().getName(), CITY + 1);
     }
 
+    @Test
+    public void LvivCityCurrentWeatherTest() {
+        String CITY = "Lviv";
+        CurrentWeatherAvailable currentWeatherAvailable = getCurrentWeatherAvailable(CITY);
+        Assert.assertEquals(currentWeatherAvailable.getLocation().getName(), CITY);
+    }
+
 }
