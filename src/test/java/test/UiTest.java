@@ -16,7 +16,7 @@ public class UiTest {
         capabilities.setBrowserName("chrome");
 //        capabilities.setPlatform(Platform.MAC);
         WebDriver driver;
-        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+        driver = new RemoteWebDriver(new URL("http://34.76.237.86:4444/wd/hub"), capabilities);
         driver.get("https://www.guru99.com/introduction-to-selenium-grid.html");
         driver.quit();
     }
