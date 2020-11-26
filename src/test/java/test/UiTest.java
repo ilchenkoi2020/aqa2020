@@ -13,7 +13,7 @@ public class UiTest {
     @Test(groups = {"ui", "full"})
     public void getGuru99Page() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setBrowserName("chrome");
+        capabilities.setBrowserName("firefox");
 //        capabilities.setPlatform(Platform.MAC);
         WebDriver driver;
         driver = new RemoteWebDriver(new URL("http://34.76.237.86:4444/wd/hub"), capabilities);
