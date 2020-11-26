@@ -14,7 +14,7 @@ public class UiTest {
     public void getGuru99Page() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
-        capabilities.setPlatform(Platform.MAC);
+//        capabilities.setPlatform(Platform.MAC);
         WebDriver driver;
         driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
         driver.get("https://www.guru99.com/introduction-to-selenium-grid.html");
