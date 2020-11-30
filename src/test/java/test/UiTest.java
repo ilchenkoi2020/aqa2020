@@ -29,7 +29,7 @@ public class UiTest {
 
     @Test(groups = {"ui", "full"})
     public void testGoogleSearch() throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "/home/m2b011990/selenium/chromedriver2");
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         WebDriver driver = new ChromeDriver();
         driver.get("http://www.google.com/");
         Thread.sleep(5000);  // Let the user actually see something!
