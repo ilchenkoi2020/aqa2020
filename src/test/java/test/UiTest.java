@@ -1,5 +1,6 @@
 package test;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -36,7 +37,8 @@ public class UiTest {
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
         WebDriver driver = new ChromeDriver(options);
 //        WebDriver driver = new ChromeDriver();
-        driver.get("http://www.google.com/");
+        driver.get("https://www.selenium.dev/downloads/");
+        System.out.println(driver.findElement(By.xpath("//ul[@id='aboutSubnav']")).getText());
         Thread.sleep(5000);  // Let the user actually see something!
         Thread.sleep(5000);  // Let the user actually see something!
         driver.quit();
