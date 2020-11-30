@@ -27,7 +27,7 @@ public class UiTest {
         driver.quit();
     }
 
-    @Test
+    @Test(groups = {"ui", "full"})
     public void testGoogleSearch() throws InterruptedException {
         System.setProperty("webdriver.chrome.driver", "/home/m2b011990/selenium/chromedriver2");
         WebDriver driver = new ChromeDriver();
