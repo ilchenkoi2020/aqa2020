@@ -15,7 +15,7 @@ public class UiTest {
     public void chromeDriver() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
-        capabilities.setPlatform(Platform.MAC);
+        capabilities.setPlatform(Platform.LINUX);
 //        options.addArguments("--no-sandbox");
 //        options.addArguments("--headless"); //should be enabled for Jenkins
 //        options.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
