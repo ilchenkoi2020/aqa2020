@@ -19,7 +19,7 @@ public class UiTest {
     public void chromeDriver() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
-        capabilities.setPlatform(Platform.MAC);
+        capabilities.setPlatform(Platform.LINUX);
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200", "--ignore-certificate-errors");
         capabilities.setCapability(ChromeOptions.CAPABILITY, options);
