@@ -18,7 +18,9 @@ public class UiTest {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setBrowserName("chrome");
         capabilities.setPlatform(Platform.LINUX);
-        capabilities.setCapability("headless", true);
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--headless", "--disable-gpu", "--window-size=1920,1200","--ignore-certificate-errors");
+        capabilities.setCapability(ChromeOptions.CAPABILITY, options);
 //        options.addArguments("--no-sandbox");
 //        options.addArguments("--headless"); //should be enabled for Jenkins
 //        options.addArguments("--disable-dev-shm-usage"); //should be enabled for Jenkins
@@ -38,7 +40,7 @@ public class UiTest {
         WebDriver driver = new ChromeDriver(options);
 //        WebDriver driver = new ChromeDriver();
         driver.get("https://www.selenium.dev/downloads/");
-        System.out.println(driver.findElement(By.xpath("//ul[@id='aboutSubnav']")).getText());
+        System.out.println(driver.findElement(By.xpath("//a[contains(text(),'Downloads')]")).getText());
         Thread.sleep(5000);  // Let the user actually see something!
         Thread.sleep(5000);  // Let the user actually see something!
         driver.quit();
